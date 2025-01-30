@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="InventoryManagement" default="default" basedir=".">
+    <description>Builds, tests, and runs the project InventoryManagement.</description>
+    <import file="nbproject/build-impl.xml"/>
+
+    <!-- Adding jar libraries to classpath -->
+    <path id="project.classpath">
+        <pathelement path="lib/jfreechart-1.0.19-demo.jar"/>
+        <pathelement path="lib/jcommon-1.0.23.jar"/>
+    </path>
+
+    <target name="-pre-init">
+        <property name="libs.CopyLibs.classpath" value="${project.lib.CopyLibs.classpath}:${project.classpath}"/>
+    </target>
+
+    <!-- Custom target to compile the project with JAR dependencies -->
+    <target name="-post-compile">
+        <copy todir="${build.classes.dir}">
+            <fileset dir="lib">
+                <include name="**/*.jar"/>
+            </fileset>
+        </copy>
+    </target>
+    
+    <!-- Custom run target to include JAR dependencies in classpath -->
+    <target name="run" depends="jar">
+        <java jar="${dist.dir}/${dist.jar}" fork="true">
+            <classpath refid="project.classpath"/>
+        </java>
+    </target>
+</project>

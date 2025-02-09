@@ -1,3 +1,7 @@
+Other pictures in screenshot lib
+
+
+
 
 ![instant char[Yazlab Proje3[1].pdf](https://github.com/user-attachments/files/18725984/Yazlab.Proje3.1.pdf)
 t](https://github.com/user-attachments/assets/bf9286fc-099f-4268-a0cd-04bdbe62995c)

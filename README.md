@@ -1,5 +1,6 @@
 Other pictures in screenshot lib
 
+instant calculated chart
 
 
 
